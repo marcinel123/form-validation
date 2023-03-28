@@ -1,33 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form - heycloud.pl</title>
-    <style>
-
-    </style>
-</head>
-<body>
-    <h3>Form - Heycloud.pl</h3>
-    <form>
-        <label for="name">Name Input</label>
-        <input type="text" id="name" maxlength="10"/>
-        <label for="last-name">Last Name Input</label>
-        <input type="text" id="last-name" maxlength="30"/>
-        <label for="social-number">Social Number</label>
-        <input type="number" id="social-number"/>
-        <label for="birth-data">Birth Data</label>
-        <input type="date" id="birth-data"/>
-        <button type="submit">Send</button>
-    </form>
-   
-   
-   
-   
-   <script>
-
-    </script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Form - heycloud.pl</title>
+		<script
+			defer
+			src="script.js"></script>
+		<link
+			rel="stylesheet"
+			href="styles.css" />
+	</head>
+	<body>
+		<h3 class="heading">Form - Heycloud.pl</h3>
+		<form
+			id="form"
+			class="form">
+			<label for="name">Name Input</label>
+			<input
+				type="text"
+				id="name"
+				minlength="20"
+				maxlength="20"
+				required />
+			<label for="last-name">Last Name Input</label>
+			<input
+				type="text"
+				id="last-name"
+				minlength="30"
+				maxlength="30"
+				required />
+			<label for="social-number">Social Number</label>
+			<input
+				type="text"
+				id="social-number"
+				minlength="11"
+				maxlength="11"
+				required />
+			<label for="birth-date">Birth Data</label>
+			<input
+				type="date"
+				id="birth-date"
+				min="1930-01-01"
+				max="2010-01-01"
+				required />
+			<button
+				class="btn"
+				type="submit">
+				Send
+			</button>
+		</form>
+		<div
+			id="modal"
+			class="modal-invisible">
+			<span
+				id="close"
+				class="close-btn"
+				>&times;</span
+			>
+			<p class="modal-text">You have successfully registered.</p>
+		</div>
+	</body>
 </html>
